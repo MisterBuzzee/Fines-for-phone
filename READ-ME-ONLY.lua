@@ -116,3 +116,14 @@ AddEventHandler('qb-phone:RefreshPhone', function()
         })
     end)
 end)
+
+-------------------------------------------------------------------------------------------
+-- Drop old phone_invoices table and add
+
+CREATE TABLE `phone_invoices` (
+  `invoiceid` int(11) NOT NULL,
+  `citizenid` varchar(50) DEFAULT NULL,
+  `amount` int(11) NOT NULL DEFAULT 0,
+  `society` varchar(50) DEFAULT NULL,
+  `title` varchar(250) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
